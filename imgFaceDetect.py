@@ -14,11 +14,11 @@ from msrest.authentication import CognitiveServicesCredentials
 from azure.cognitiveservices.vision.face.models import TrainingStatusType, Person, SnapshotObjectType, OperationStatusType
 # Set the FACE_SUBSCRIPTION_KEY environment variable with your key as the value.
 # This key will serve all examples in this document.
-KEY = '327f69fc7c46434283cf8aace49cb300'
+KEY = 'api_key'
 
 # Set the FACE_ENDPOINT environment variable with the endpoint from your Face service in Azure.
 # This endpoint will be used in all examples in this quickstart.
-ENDPOINT = 'https://azurefacetest.cognitiveservices.azure.com/'
+ENDPOINT = 'api_endpoint'
 # Create an authenticated FaceClient.
 face_client = FaceClient(ENDPOINT, CognitiveServicesCredentials(KEY))
 # Detect a face in an image that contains a single face
@@ -53,10 +53,6 @@ img.show()
 
 import requests
 import json
-
-# set to your own subscription key value
-subscription_key = '327f69fc7c46434283cf8aace49cb300'
-assert subscription_key
 
 # replace <My Endpoint String> with the string from your endpoint URL
 face_api_url = 'https://azurefacetest.cognitiveservices.azure.com/face/v1.0/detect'
